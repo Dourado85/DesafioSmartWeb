@@ -91,7 +91,7 @@
 
       function mostraAba(aba) {
         document.getElementById("empresa").style.display = "none";
-        document.getElementById("produto").style.display = "none";
+        document.getElementById("produtos").style.display = "none";
         document.getElementById("contato").style.display = "none";
         document.getElementById("faq").style.display = "none";
         document.getElementById(aba).style.display = "block";
