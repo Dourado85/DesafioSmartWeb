@@ -73,7 +73,7 @@
 
   <body bgcolor="white">
     <div id="topo">
-      <table width="1100" border="0" cellpadding="0" cellspacing="0">
+      <table border="0" cellpadding="0" cellspacing="0">
         <tr>
           <td width="80"><img src="logo.png" width="60" height="60" /></td>
           <td>
@@ -118,33 +118,28 @@
         deixamos o resto de fora.</font
       >
       <br /><br />
-      <div class="botao" style="float: left" onclick="mostraAba('produtos')">
-        Ver produtos
-      </div>
-      <div
-        class="botao"
-        style="
-          float: left;
-          margin-left: 10px;
-          background: #fff;
-          color: #ffeb3b;
-          border: 1px solid #ffeb3b;
-        "
-        onclick="mostraAba('contato')"
-      >
-        Pedir orçamento
+      <div class="acoes-empresa">
+        <div class="botao" onclick="mostraAba('produtos')">Ver produtos</div>
+
+        <div
+          class="botao"
+          style="background: #fff; color: #ffeb3b; border: 1px solid #ffeb3b"
+          onclick="mostraAba('contato')"
+        >
+          Pedir orçamento
+        </div>
       </div>
       <br /><br /><br />
 
-      <img src="switch-24-portas.jpg" width="1100" height="120" />
+      <img src="switch-24-portas.jpg" alt="Switch de rede de 24 portas" />
       <br />
       Status das portas: <span class="verde"></span> <span class="verde"></span>
       <span class="vermelho"></span> <span class="verde"></span>
       <span class="vermelho"></span> <br /><br />
 
-      <table width="100%" border="0">
+      <table class="tabela-empresa">
         <tr>
-          <td width="220" valign="top">
+          <td valign="top">
             <font size="1" color="#ccc">QUEM SOMOS</font>
           </td>
           <td>
