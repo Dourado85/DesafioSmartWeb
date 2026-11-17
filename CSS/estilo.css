@@ -1,10 +1,12 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   outline: none !important;
 }
 body {
-  width: 1100px;
+  width: 100%;
+  min-width: 0;
   font-family: "Comic Sans MS", cursive;
   font-size: 13px;
   color: #999;
@@ -18,9 +20,13 @@ div#topo table tr td div.logo span b {
   font-size: 30px !important;
   color: #3b7fc0 !important;
 }
+#menu {
+  display: flex;
+  flex-wrap: wrap;
+}
 .aba {
-  float: left;
-  width: 250px;
+  flex: 1 1 25%;
+  min-width: 0;
   padding: 15px;
   background: #eee;
   color: #ccc;
@@ -42,11 +48,8 @@ div#topo table tr td div.logo span b {
   background: #ffd600 !important;
 }
 h1 {
-  font-size: 40px;
+  font-size: 22px;
   color: #ddd;
-}
-h1 {
-  font-size: 22px !important;
 }
 .titulo {
   font-size: 18px !important;
@@ -96,8 +99,66 @@ textarea {
   height: 30px;
   color: #ccc;
 }
-@media (max-width: 1200px) {
-  #menu {
-    display: none;
+/* Responsividade do menu */
+
+@media (max-width: 768px) {
+  .aba {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .aba {
+    flex-basis: 100%;
+  }
+}
+#topo > table {
+  width: 100%;
+  max-width: 1100px;
+}
+#empresa img {
+  max-width: 100%;
+  height: auto;
+}
+.acoes-empresa {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.acoes-empresa .botao {
+  width: 200px;
+  max-width: 100%;
+}
+@media (max-width: 480px) {
+  .acoes-empresa {
+    flex-direction: column;
+  }
+}
+#topo > table {
+  width: 100%;
+  max-width: 1100px;
+}
+#topo > table td:first-child {
+  width: 80px;
+}
+#topo > table td:last-child {
+  width: 120px;
+  white-space: nowrap;
+  padding-right: 10px;
+}
+@media (max-width: 480px) {
+  .tabela-empresa,
+  .tabela-empresa tbody,
+  .tabela-empresa tr,
+  .tabela-empresa td {
+    display: block;
+    width: 100%;
+  }
+  .tabela-empresa table,
+  .tabela-empresa table tbody,
+  .tabela-empresa table tr,
+  .tabela-empresa table td {
+    display: block;
+    width: 100%;
   }
 }
