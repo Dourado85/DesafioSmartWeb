@@ -73,27 +73,25 @@
 
   <body bgcolor="white">
     <div id="topo">
-      <table border="0" cellpadding="0" cellspacing="0">
-        <tr>
-          <td width="80"><img src="logo.png" width="60" height="60" /></td>
-          <td>
-            <div class="logo">
-              <span><b>SmartWeb</b></span
-              ><br /><font size="1" color="#5d8fbf">INFORMÁTICA E REDES</font>
-            </div>
-          </td>
-          <td align="right">
-            <div
-              onclick="mostraAba('produtos')"
-              style="color: #3b7fc0; cursor: pointer"
-            >
-              Meu pedido (<span id="qtd">0</span>)
-            </div>
-          </td>
-        </tr>
-      </table>
-    </div>
+      <div class="topo-conteudo">
+        <div class="topo-imagem">
+          <img src="logo.png" width="60" height="60" />
+        </div>
+        <div class="logo">
+          <span><b>SmartWeb</b></span
+          ><br />
+          <font size="1" color="#5d8fbf">INFORMÁTICA E REDES</font>
+        </div>
 
+        <div
+          class="topo-pedido"
+          onclick="mostraAba('produtos')"
+          style="color: #3b7fc0; cursor: pointer"
+        >
+          Meu pedido (<span id="qtd">0</span>)
+        </div>
+      </div>
+    </div>
     <div id="menu">
       <div class="aba" onclick="mostraAba('empresa')">A empresa</div>
       <div class="aba" onclick="mostraAba('produtos')">Produtos</div>
