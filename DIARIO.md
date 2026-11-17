@@ -1,11 +1,11 @@
 Diário Projeto Web Resgate SmartWeb
 
-| Equipe  | Integrantes                               |
-| ------- | ----------------------------------------- |
-| Carmelo | Gabriela                                  |
-|         | George Dourado Matos Freire (2026.15.139) |
-|         | Ítalo Augusto                             |
-|         | Marcos                                    |
+| Equipe  | Integrantes                 | Matrícula     |
+| ------- | --------------------------- | ------------- |
+| Carmelo | Gabriela Oliveira Almeida   | (2026.15.47)  |
+|         | George Dourado Matos Freire | (2026.15.139) |
+|         | Ítalo Augusto               |
+|         | Marcos                      |
 
 Diário Registro de Atividades
 
