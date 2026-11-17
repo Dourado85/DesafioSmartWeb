@@ -16,7 +16,7 @@ body {
   background: #0a62a8;
   height: 90px;
 }
-div#topo table tr td div.logo span b {
+#topo .logo span b {
   font-size: 30px !important;
   color: #3b7fc0 !important;
 }
@@ -112,10 +112,6 @@ textarea {
     flex-basis: 100%;
   }
 }
-#topo > table {
-  width: 100%;
-  max-width: 1100px;
-}
 #empresa img {
   max-width: 100%;
   height: auto;
@@ -161,4 +157,17 @@ textarea {
     display: block;
     width: 100%;
   }
+}
+.topo-conteudo {
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr) 120px;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  height: 100%;
+}
+.topo-pedido {
+  text-align: right;
+  white-space: nowrap;
+  padding-right: 10px;
 }
