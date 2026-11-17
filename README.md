@@ -159,7 +159,52 @@ A funcionalidade adicional definida para a equipe consiste em implementar um con
 
 ---
 
-## 📋 8. Estratégia de desenvolvimento e validação
+## 📋 8. Ficha da Equipe — Requisitos exclusivos
+
+Conforme estabelecido no Roteiro do Desafio SmartWeb, a equipe deverá implementar os requisitos específicos definidos pelo professor em sala de aula.
+
+Esses requisitos devem estar presentes na aplicação final e devidamente justificados nesta documentação.
+
+### 8.1 Requisitos definidos para a equipe Carmelo
+
+| Item                  | Definição                   | Aplicação no projeto                                                                      |
+| --------------------- | --------------------------- | ----------------------------------------------------------------------------------------- |
+| Código da equipe      | A confirmar                 | Prefixo das variáveis CSS e comentários de autoria no início de cada arquivo.             |
+| Cor de destaque       | A confirmar (hexadecimal)   | Cor principal do site, respeitando contraste mínimo de 4.5:1 em relação ao texto.         |
+| Breakpoint principal  | A confirmar (px)            | Ponto de adaptação do layout de uma para várias colunas, seguindo abordagem mobile-first. |
+| Produto extra         | A confirmar                 | Inclusão do 13º produto nos dados do JavaScript, na posição indicada pelo roteiro.        |
+| Pergunta extra do FAQ | A confirmar                 | Inclusão da 8ª pergunta, com resposta elaborada pela equipe.                              |
+| Recurso extra         | Contador de itens por linha | Exibição e atualização dinâmica da quantidade de produtos por categoria.                  |
+
+### 8.2 Justificativa do recurso extra
+
+O recurso adicional definido para a equipe Carmelo é o **Contador de Itens por Linha**.
+
+A funcionalidade tem como objetivo apresentar a quantidade de produtos disponíveis em cada categoria do catálogo, proporcionando melhor visualização e acompanhamento dos resultados apresentados ao usuário.
+
+**Comportamento esperado:**
+
+- Exibir a quantidade de produtos por categoria.
+- Atualizar os contadores conforme a pesquisa realizada.
+- Atualizar os valores quando os filtros forem aplicados.
+- Considerar os produtos efetivamente exibidos na listagem.
+- Restaurar as quantidades quando a pesquisa e os filtros forem removidos.
+
+**Critérios de validação:**
+
+1. Conferir os contadores na exibição inicial do catálogo.
+2. Pesquisar produtos por nome, código ou descrição.
+3. Aplicar filtros por categoria.
+4. Verificar se os contadores acompanham os resultados apresentados.
+5. Limpar os filtros e confirmar a restauração das quantidades.
+
+### 8.3 Justificativa dos requisitos
+
+Os requisitos exclusivos da equipe complementam os objetivos de modernização da SmartWeb, permitindo aplicar conceitos de HTML, CSS e JavaScript, além de reforçar a responsividade, a acessibilidade e a experiência de utilização da aplicação.
+
+---
+
+## 📋 9. Estratégia de desenvolvimento e validação
 
 O desenvolvimento será realizado de maneira incremental, seguindo o ciclo:
 
@@ -186,13 +231,13 @@ O desenvolvimento será realizado de maneira incremental, seguindo o ciclo:
 
 ---
 
-## 🤖 9. Declaração de utilização de Inteligência Artificial
+## 🤖 10. Declaração de utilização de Inteligência Artificial
 
 Durante o desenvolvimento do projeto, foi utilizada a ferramenta **ChatGPT, da OpenAI**, como recurso de apoio educacional e técnico.
 
 A utilização da ferramenta teve como objetivo auxiliar a equipe na compreensão dos problemas identificados, interpretação dos conceitos apresentados na apostila, análise de alternativas de implementação e elaboração de critérios de validação.
 
-### 9.1 Finalidades de utilização
+### 10.1 Finalidades de utilização
 
 | Etapa           | Como a IA foi utilizada                                                                                 |
 | --------------- | ------------------------------------------------------------------------------------------------------- |
@@ -269,7 +314,7 @@ A utilização da ferramenta teve como objetivo auxiliar a equipe na compreensã
 
 ---
 
-## 📸 10. Evidências do projeto
+## 📸 11. Evidências do projeto
 
 As evidências serão organizadas conforme a evolução de cada problema identificado.
 
@@ -288,7 +333,7 @@ Evidencias/
 
 ---
 
-## 📖 11. Diário de Bordo e controle de versão
+## 📖 12. Diário de Bordo e controle de versão
 
 Todas as atividades serão registradas no arquivo `DIARIO.md`, contendo:
 
@@ -314,7 +359,7 @@ docs: atualizar diario de bordo
 
 ---
 
-## 📚 12. Referências
+## 📚 13. Referências
 
 - Apostila da disciplina Desenvolvimento Web I.
 - Roteiro do Desafio SmartWeb — Informática e Redes.
@@ -325,7 +370,7 @@ docs: atualizar diario de bordo
 
 ---
 
-## ✅ 13. Considerações finais
+## ✅ 14. Considerações finais
 
 O projeto **Resgate da SmartWeb — Informática e Redes** representa uma oportunidade de aplicar, de forma prática, os conhecimentos adquiridos na disciplina Desenvolvimento Web I.
 
