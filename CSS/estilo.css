@@ -177,3 +177,80 @@ textarea {
   white-space: nowrap;
   padding-right: 10px;
 }
+/* Ajustes de espaçamento e responsividade da área de produtos */
+
+#produtos {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+#produtos #busca {
+  display: block;
+  width: min(100%, 300px);
+  margin-bottom: 12px;
+}
+
+#produtos > span {
+  display: inline-block;
+  margin: 4px 6px 12px 0;
+  cursor: pointer;
+}
+
+#catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 10px;
+  width: 100%;
+}
+#catalogo > .card {
+  float: none !important;
+  width: auto !important;
+  margin: 0 !important;
+  min-width: 0;
+}
+
+#catalogo img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 480px) {
+  #produtos {
+    padding: 12px;
+  }
+
+  #catalogo {
+    grid-template-columns: 1fr;
+  }
+}
+/* Alinhamento das demais seções */
+
+#empresa,
+#contato,
+#faq {
+  width: calc(100% - 40px);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+
+/* Espaçamento entre os elementos do FAQ */
+#faq h6 {
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+
+#faq .resposta {
+  margin-bottom: 14px;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 600px) {
+  #empresa,
+  #contato,
+  #faq {
+    width: calc(100% - 30px);
+  }
+}
