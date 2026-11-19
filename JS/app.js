@@ -97,58 +97,56 @@
         document.getElementById(aba).style.display = "block";
       }
 
-      function montaCatalogo() {
-        var html = "";
-        for (var i = 0; i < produtos.length; i++) {
-          if ((linhaAtual == "todas" || produtos[i].linha == linhaAtual)) {
-            html =
-              html +
-              "<div class='card' style='float:left;width:240px;height:330px;margin:5px;border:1px solid #eee'>";
-            html = html + "<img src='produto" + i + ".png' width='120'>";
-            html =
-              html +
-              "<font size='1' color='#ccc'>" +
-              produtos[i].sku +
-              "</font><br>";
-            html = html + "<h4>" + produtos[i].nome + "</h4>";
-            html =
-              html +
-              "<font size='2' color='#bbb'>" +
-              produtos[i].desc +
-              "</font><br><br>";
-            html =
-              html +
-              "<b style='font-size:20px'>R$ " +
-              produtos[i].preco +
-              "</b><br>";
-            html =
-              html +
-              "<div class='botao' onclick='adiciona(" +
-              i +
-              ")'>Adicionar ao pedido</div>";
-            html = html + "</div>";
-          }
-        }
-        document.getElementById("catalogo").innerHTML = html;
-      }
+     function montaCatalogo() {
+      var html = "";
+      var termo = document.getElementById("busca").value.toLowerCase().trim();
+
+      for (var i = 0; i < produtos.length; i++) {
+
+      var correspondeCategoria =
+        linhaAtual == "todas" || produtos[i].linha == linhaAtual;
+
+      var textoProduto = (
+        produtos[i].nome + " " +
+        produtos[i].desc + " " +
+        produtos[i].sku
+      ).toLowerCase();
+
+      var correspondePesquisa = textoProduto.indexOf(termo) !== -1;
+
+      if (correspondeCategoria && correspondePesquisa) {
+
+      html += "<div class='card' style='float:left;width:240px;height:330px;margin:5px;border:1px solid #eee'>";
+      html += "<img src='produto" + i + ".png' width='120'>";
+      html += "<font size='1' color='#ccc'>" + produtos[i].sku + "</font><br>";
+      html += "<h4>" + produtos[i].nome + "</h4>";
+      html += "<font size='2' color='#bbb'>" + produtos[i].desc + "</font><br><br>";
+      html += "<b style='font-size:20px'>R$ " + produtos[i].preco + "</b><br>";
+      html += "<div class='botao' onclick='adiciona(" + i + ")'>Adicionar ao pedido</div>";
+      html += "</div>";
+    }
+  }
+
+  if (html === "") {
+    html = "<p>Nenhum produto encontrado.</p>";
+  }
+
+  document.getElementById("catalogo").innerHTML = html;
+}
 
       function filtra(l) {
         linhaAtual = l;
         montaCatalogo();
       }
-
       function busca() {
         var termo = document.getElementById("busca").value;
-        document.getElementById("resultadoBusca").innerHTML =
-          "Você buscou por: <b>" + termo + "</b>";
-        for (i = 0; i < produtos.length; i++) {
-          if (produtos[i].nome.indexOf(termo) > 0) {
-            document.getElementById("catalogo").innerHTML = produtos[i].nome;
-          }
-        }
-      }
+        var resultado = document.getElementById("resultadoBusca");
 
-      function adiciona(i) {
+        resultado.textContent = "Você digitou: " + termo;
+
+        montaCatalogo();
+      }
+        function adiciona(i) {
         carrinho.push(produtos[i]);
         for (var j = 0; j < carrinho.length; j++) {
           total = total + carrinho[j].preco;
