@@ -99,7 +99,7 @@
 
       function montaCatalogo() {
         var html = "";
-        for (var i = 0; i <= produtos.length; i++) {
+        for (var i = 0; i < produtos.length; i++) {
           if ((linhaAtual = "todas" || produtos[i].linha == linhaAtual)) {
             html =
               html +
