@@ -116,23 +116,40 @@
 
       if (correspondeCategoria && correspondePesquisa) {
 
-      html += "<div class='card' style='float:left;width:240px;height:330px;margin:5px;border:1px solid #eee'>";
-      html += "<img src='produto" + i + ".png' width='120'>";
-      html += "<font size='1' color='#ccc'>" + produtos[i].sku + "</font><br>";
-      html += "<h4>" + produtos[i].nome + "</h4>";
-      html += "<font size='2' color='#bbb'>" + produtos[i].desc + "</font><br><br>";
-      html += "<b style='font-size:20px'>R$ " + produtos[i].preco + "</b><br>";
-      html += "<div class='botao' onclick='adiciona(" + i + ")'>Adicionar ao pedido</div>";
+      var preco = Number(produtos[i].preco);
+
+      html += "<div class='card'>";
+      html += "<div class='card-imagem'>";
+      html += "<img src='IMG/" + produtos[i].sku + ".png' alt='" + produtos[i].nome + "'>";
       html += "</div>";
-    }
-  }
 
-  if (html === "") {
+      html += "<div class='card-conteudo'>";
+      html += "<span class='card-sku'>" + produtos[i].sku + "</span>";
+      html += "<h4>" + produtos[i].nome + "</h4>";
+      html += "<p class='card-descricao'>" + produtos[i].desc + "</p>";
+
+      html += "<div class='card-preco'>";
+      html += "<strong>" + preco.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL'
+      }) + "</strong>";
+      html += "<small>ou 10x de " + (preco / 10).toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL'
+      }) + "</small>";
+      html += "</div>";
+
+      html += "<div class='botao' onclick='adiciona(" + i + ")'>Adicionar ao pedido</div>";
+      html += "</div></div>";
+      }
+      }
+
+    if (html === "") {
     html = "<p>Nenhum produto encontrado.</p>";
-  }
+    }
 
-  document.getElementById("catalogo").innerHTML = html;
-}
+    document.getElementById("catalogo").innerHTML = html; 
+    }
 
       function filtra(l) {
         linhaAtual = l;

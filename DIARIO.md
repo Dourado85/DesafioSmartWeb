@@ -4,8 +4,8 @@ Diário Projeto Web Resgate SmartWeb
 | ------- | --------------------------- | ------------- |
 | Carmelo | Gabriela Oliveira Almeida   | (2026.15.47)  |
 |         | George Dourado Matos Freire | (2026.15.139) |
-|         | Ítalo Augusto               |
-|         | Marcos                      |
+|         | Ítalo Augusto               |               |
+|         | Marcos Eliabe de Almeida    | (2026.15.156) |
 
 Diário Registro de Atividades
 
